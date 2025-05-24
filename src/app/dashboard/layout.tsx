@@ -35,6 +35,13 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
                     <Link href="/dashboard" className="hover:bg-blue-100 dark:hover:bg-gray-700 rounded px-3 py-2 font-medium transition" onClick={() => setSidebarOpen(false)}>Home</Link>
                     <Link href="/dashboard/analytics" className="hover:bg-blue-100 dark:hover:bg-gray-700 rounded px-3 py-2 font-medium transition" onClick={() => setSidebarOpen(false)}>Analytics</Link>
                     <Link href="/dashboard/settings" className="hover:bg-blue-100 dark:hover:bg-gray-700 rounded px-3 py-2 font-medium transition" onClick={() => setSidebarOpen(false)}>Settings</Link>
+                    <Link
+                        href="/dashboard/gemini"
+                        className="hover:bg-blue-100 dark:hover:bg-gray-700 rounded px-3 py-2 font-medium transition"
+                        onClick={() => setSidebarOpen(false)}
+                    >
+                        Gemini
+                    </Link>
                 </nav>
             </aside>
             {/* Overlay for mobile sidebar */}
@@ -63,7 +70,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
                             className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-xl text-gray-700 dark:text-gray-200 shadow hover:bg-gray-300 dark:hover:bg-gray-600 transition"
                             aria-label="Toggle theme"
                         >
-                            {theme === "dark" ?<Moon/> :<Sun/>}
+                            {theme === "dark" ? <Moon /> : <Sun />}
                         </button>
                         <button
                             className="bg-blue-600 text-white px-3 py-1 rounded shadow hover:bg-blue-700"
@@ -83,8 +90,9 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
                                 className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-xl text-gray-700 dark:text-gray-200 shadow hover:bg-gray-300 dark:hover:bg-gray-600 transition"
                                 aria-label="Toggle theme"
                             >
-                                {theme === "dark" ? <Moon/> :<Sun/>}
+                                {theme === "dark" ? <Moon /> : <Sun />}
                             </button>
+
                             <button
                                 className="bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700"
                                 onClick={() => setShowModel(true)}
