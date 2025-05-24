@@ -1,7 +1,7 @@
 export default function SettingsPage() {
   return (
     <div>
-      <p>Update your settings here.</p>
+      <p className="text-gray-400">Update your settings here.</p>
     </div>
   );
 }
